@@ -1,8 +1,8 @@
-import lib.linkedlist.SimpleLinkedList;
+import lib.linkedlist.SingleLinkedList;
 
 public class main {
 	public static void main(String[] args) {
-		SimpleLinkedList list = new SimpleLinkedList();
+		SingleLinkedList list = new SingleLinkedList();
 		list.append(100);
 		list.append(30);
 		list.append(15);

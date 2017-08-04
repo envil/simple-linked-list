@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import lib.linkedlist.Node;
-import lib.linkedlist.SimpleLinkedList;
+import lib.linkedlist.SingleLinkedList;
 import resources.MessageKeys;
 import resources.Messages;
 
@@ -32,20 +32,20 @@ public class SimpleLinkedListTest {
 	}
 
 	Random rand = new Random();
-	private SimpleLinkedList emptyList;
-	private SimpleLinkedList oneElementList;
-	private SimpleLinkedList normalList;
-	private SimpleLinkedList randomList;
+	private SingleLinkedList emptyList;
+	private SingleLinkedList oneElementList;
+	private SingleLinkedList normalList;
+	private SingleLinkedList randomList;
 	int randomValue;
 
 	@Before
 	public void setUp() throws Exception {
 		System.setOut(new PrintStream(outContent));
 
-		emptyList = new SimpleLinkedList();
-		oneElementList = new SimpleLinkedList();
-		normalList = new SimpleLinkedList();
-		randomList = new SimpleLinkedList();
+		emptyList = new SingleLinkedList();
+		oneElementList = new SingleLinkedList();
+		normalList = new SingleLinkedList();
+		randomList = new SingleLinkedList();
 
 		oneElementList.append(10);
 		normalList.append(25);
@@ -238,7 +238,7 @@ public class SimpleLinkedListTest {
 		isValidList(randomList);
 	}
 
-	private void isValidList(SimpleLinkedList list) {
+	private void isValidList(SingleLinkedList list) {
 		if (list.getSize() == 0) {
 			assertEquals(null, list.getHead());
 			assertEquals(null, list.getTail());

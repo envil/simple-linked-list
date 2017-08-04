@@ -3,11 +3,11 @@ package lib.linkedlist;
 import resources.MessageKeys;
 import resources.Messages;
 
-public class SimpleLinkedList {
+public class SingleLinkedList {
 	/**
 	 * Constructor
 	 */
-	public SimpleLinkedList() {
+	public SingleLinkedList() {
 		this.head = null;
 		this.tail = null;
 		this.size = 0;
