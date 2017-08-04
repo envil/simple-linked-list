@@ -9,6 +9,11 @@ class Node {
 		link = null;
 	}
 
+	public Node(int value) {
+		this.value = value;
+		this.link = null;
+	}
+
 	public Node(int value, Node link) {
 		this.value = value;
 		this.link = link;
