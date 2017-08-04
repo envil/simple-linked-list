@@ -1,6 +1,6 @@
 package lib.linkedlist;
 
-class Node {
+public class Node {
 	/**
 	 * Constructors
 	 */

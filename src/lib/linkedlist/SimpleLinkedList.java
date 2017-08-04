@@ -1,5 +1,8 @@
 package lib.linkedlist;
 
+import resources.MessageKeys;
+import resources.Messages;
+
 public class SimpleLinkedList {
 	/**
 	 * Constructor
@@ -56,11 +59,11 @@ public class SimpleLinkedList {
 	 */
 	public void deleteAtPosition(int posToDelete) {
 		if (size == 0) {
-			System.out.print("Cannot delete since the list is empty!");
+			System.out.println(Messages.getMessage(MessageKeys.cannotDeleteEmpty));
 			return;
 		}
 		if (posToDelete < 1 || posToDelete > size) {
-			System.out.println("Invalid position to delete");
+			System.out.println(Messages.getMessage(MessageKeys.cannotDeleteInvalidPosition));
 			return;
 		}
 		int currentPos = 1;
@@ -78,7 +81,7 @@ public class SimpleLinkedList {
 			previousNode.setLink(currentNode.getLink());
 		}
 		if (currentPos == size) {
-			tail = currentNode;
+			tail = previousNode;
 		}
 		--size;
 	}
@@ -96,7 +99,7 @@ public class SimpleLinkedList {
 	 */
 	public void deleteNodeBiggerThan(int value) {
 		if (size == 0) {
-			System.out.print("Cannot delete since the list is empty!");
+			System.out.println(Messages.getMessage(MessageKeys.cannotDeleteEmpty));
 			return;
 		}
 		Node currentNode = head;
@@ -124,7 +127,7 @@ public class SimpleLinkedList {
 	 */
 	public void print() {
 		if (size == 0) {
-			System.out.print("List is empty!");
+			System.out.println(Messages.getMessage(MessageKeys.listIsEmpty));
 			return;
 		}
 		System.out.print(head.getValue());
@@ -143,12 +146,20 @@ public class SimpleLinkedList {
 	 * @category Getters & Setters
 	 */
 	
-	public Node getStart() {
+	public Node getHead() {
 		return head;
 	}
 
-	public void setStart(Node start) {
+	public void setHead(Node start) {
 		this.head = start;
+	}
+
+	public Node getTail() {
+		return tail;
+	}
+
+	public void setTail(Node tail) {
+		this.tail = tail;
 	}
 
 	public int getSize() {
